@@ -28,17 +28,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav>
-          <ul>
-            <li>
+        <nav className="bg-navbar flex justify-between p-2 font-semibold">
+          <ul className="p-2 pl-4">
+            <li className="cursor-pointer">
               <Link href={"/"}>Home</Link>
             </li>
           </ul>
-          <ul>
-            <li>
+          <ul className="flex gap-4 p-2 pr-4">
+            <li className="cursor-pointer">
               <Link href={"/about"}>About</Link>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Link href={"/login"}>Log In</Link>
             </li>
           </ul>

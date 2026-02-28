@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent-color: #2e91d3;
+  --navbar: #2e91d3;
 }
 
 @theme inline {
@@ -11,13 +11,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-navbar: var(--navbar);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --accent-color: #220655;
+    --navbar: #220655;
   }
 }
 
@@ -25,22 +26,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-nav {
-  background: var(--accent-color);
-  display: flex;
-  justify-content: space-between;
-  top: 0;
-  padding: 10px 20px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav li {
-  padding: 10px;
-  cursor: pointer;
 }
