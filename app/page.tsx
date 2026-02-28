@@ -23,16 +23,19 @@ export default async function Home() {
                   {item.node.title}
                 </h2>
               </Link>
-              <div className="h-[350px] flex gap-4 p-0">
-                <div className="w-[225px] relative">
-                  <Image
-                    src={item.node.main_picture.medium}
-                    alt="Anime Poster"
-                    fill={true}
-                    sizes=""
-                  />
+              <div className="h-88 flex justify-center items-center gap-4">
+                <div className="w-2/10 flex justify-center">
+                  <Link href={`/${item.node.id}`}>
+                    <Image
+                      src={item.node.main_picture.medium}
+                      alt="Anime Poster"
+                      width={225}
+                      height={320}
+                      style={{ width: "225px", height: "320px" }}
+                    />
+                  </Link>
                 </div>
-                <h3 className="w-[900px]">
+                <h3 className="w-8/10">
                   {item.node.synopsis || "This anime has no synopsis"}
                 </h3>
               </div>
